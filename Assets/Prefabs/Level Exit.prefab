@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1352887045
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ae8d96c68b71b1f4e8c20a64488655a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,7 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6597f5f7b224f43941caa2d0927b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitWait: 3
+  fireworkPrefab: {fileID: 3453504054029469062, guid: da80c2f4bd738fb48bdf1b55701ea94d,
+    type: 3}
+  exitWait: 2
+  levelExitSlowMoFactor: 0.2
 --- !u!61 &5431721409155629640
 BoxCollider2D:
   m_ObjectHideFlags: 0

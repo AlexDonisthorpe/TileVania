@@ -20,7 +20,7 @@ TagManager:
   - Enemy
   - Hazards
   - Interactables
-  - 
+  - Fireworks
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1447108419
+    locked: 0
+  - name: Fireworks
+    uniqueID: 2991631627
     locked: 0
   - name: Hazards
     uniqueID: 1305759181

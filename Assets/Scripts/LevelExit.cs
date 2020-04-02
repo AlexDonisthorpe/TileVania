@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
+    [SerializeField] GameObject fireworkPrefab;
     [SerializeField] float exitWait = 2f;
-    [SerializeField] float levelExitSlowMoFactor = 0.2f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,9 +15,8 @@ public class LevelExit : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
-        Time.timeScale = levelExitSlowMoFactor;
+        Instantiate(fireworkPrefab, FindObjectOfType<Player>().transform);
         yield return new WaitForSeconds(exitWait);
-        Time.timeScale = 1;
 
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex+1);
