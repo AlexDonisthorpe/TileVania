@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
+    [SerializeField] float deathDelayTimer = 1f;
+
     //Scores
     [SerializeField] int playerLives = 3;
     [SerializeField] int score = 0;
@@ -43,7 +45,13 @@ public class GameSession : MonoBehaviour
 
     public void ProcessPlayerDeath()
     {
-        if(playerLives > 1)
+        StartCoroutine("HandleDeath");
+    }
+
+    IEnumerator HandleDeath()
+    {
+        yield return new WaitForSeconds(deathDelayTimer);
+        if (playerLives > 1)
         {
             TakeLife();
         }
