@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/3. Ladder Time.unity
     guid: c106fad5e5bea5b4f9db24b551d9ef6c
+  - enabled: 1
+    path: Assets/Levels/4. Water Rising.unity
+    guid: 2e61795c79ee52a49b9404fbc25fb055
+  - enabled: 1
+    path: Assets/Levels/Success Screen.unity
+    guid: 4a5b6cdd4799bc74ab4a4a5f7744819c
   m_configObjects: {}
