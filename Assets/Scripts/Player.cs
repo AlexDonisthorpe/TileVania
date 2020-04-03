@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(250f, 25f);
+    [SerializeField] AudioClip jumpSFX;
 
     // State
     bool isAlive = true;
@@ -63,6 +64,7 @@ public class Player : MonoBehaviour
         if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
         if (Input.GetButtonDown("Jump"))
         {
+            AudioSource.PlayClipAtPoint(jumpSFX, Camera.main.transform.position);
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
         }

@@ -134,6 +134,7 @@ MonoBehaviour:
   jumpSpeed: 28
   climbSpeed: 10
   deathKick: {x: -15, y: 25}
+  jumpSFX: {fileID: 8300000, guid: 7cec9fef19d4c044eac462ae2f8ab030, type: 3}
 --- !u!1 &5214012287227184626
 GameObject:
   m_ObjectHideFlags: 0
