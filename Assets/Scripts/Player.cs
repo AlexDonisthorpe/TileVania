@@ -6,11 +6,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Config
+    [Header("Config Variables")]
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(250f, 25f);
+
+    // SFX
+    [Header("Sound Effects")]
     [SerializeField] AudioClip jumpSFX;
+    [SerializeField] AudioClip deathSFX;
 
     // State
     bool isAlive = true;
@@ -109,6 +114,7 @@ public class Player : MonoBehaviour
             myAnimator.SetTrigger("Die");
             myRigidBody.velocity = deathKick;
             isAlive = false;
+            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
