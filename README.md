@@ -15,3 +15,4 @@ Playable link [here!](https://simmer.io/@Tenlaael/tens-tilevania)
 ## Credits & References
 
 Jump sound effect provided by [dklon](https://opengameart.org/users/dklon)
+Death sound effect provided by [Little Robot Sound Factory](www.littlerobotsoundfactory.com)
