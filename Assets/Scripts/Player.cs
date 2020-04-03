@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
         if (Input.GetButtonDown("Jump"))
         {
-            AudioSource.PlayClipAtPoint(jumpSFX, Camera.main.transform.position);
+            FindObjectOfType<AudioSource>().PlayOneShot(jumpSFX);
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
         }
@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
             myAnimator.SetTrigger("Die");
             myRigidBody.velocity = deathKick;
             isAlive = false;
-            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
+            FindObjectOfType<AudioSource>().PlayOneShot(deathSFX);
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
-    [SerializeField] AudioClip pickupSound;
+    [SerializeField] AudioClip coinSFX;
     [SerializeField] int pointsValue = 100;
     bool addedToScore = false;
 
@@ -13,7 +13,7 @@ public class CoinPickup : MonoBehaviour
         if (!addedToScore)
         {
             addedToScore = true;
-            AudioSource.PlayClipAtPoint(pickupSound, Camera.main.transform.position);
+            FindObjectOfType<AudioSource>().PlayOneShot(coinSFX);
             FindObjectOfType<GameSession>().AddToScore(pointsValue);
             Destroy(gameObject);
         }
